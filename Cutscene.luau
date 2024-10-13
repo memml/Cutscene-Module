@@ -9,7 +9,7 @@
 	- https://realethanplayzdev.github.io/DeviceInfo/About/
 	- https://www.roblox.com/library/5343169924
 	- https://devforum.roblox.com/t/716491
-	- https://gist.github.com/RealEthanPlayzDev/60258fb3a9282089aab838952a64895c
+	- https://github.com/memml/Cutscene-Module/blob/main/Cutscene.luau
 --]]
 
 assert(game:GetService("RunService"):IsClient(), "Cutscene can only run in the client")
