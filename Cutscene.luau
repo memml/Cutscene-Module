@@ -1,3 +1,4 @@
+--!strict
 --[[
 	Cutscene.luau
 	Author: @MLMML
@@ -40,7 +41,7 @@ local TweenService = game:GetService("TweenService")
 
 local UI = script.Assets:WaitForChild("Cutscene")
 
-local function SetUp(cutscene, Data: SharedTable)
+local function SetUp(cutscene, Data)
 	local CameraPoints = cutscene.CameraPoints:GetChildren()
 	local CameraFolder = cutscene.CameraPoints
 
@@ -64,7 +65,7 @@ local function SetUp(cutscene, Data: SharedTable)
 	end
 end
 
-function cutsceneClass.new(Cameras: Folder, CutsceneData: SharedTable)
+function cutsceneClass.new(Cameras: Folder, CutsceneData)
 	local newCutscene = {}
 	newCutscene.ClassName = "Cutscene"
 	newCutscene.CameraPoints = Cameras
