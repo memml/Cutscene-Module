@@ -6,7 +6,7 @@
 	Version: 1.0
 	
 	Links:
-	- https://create.roblox.com/store/asset/95522313843951/Cutscene-Module
+	- https://create.roblox.com/store/asset/79073444475735/Cutscene-Module
 	- https://github.com/memml/Cutscene-Module/blob/main/Cutscene.luau
 	
 	Example Code:
