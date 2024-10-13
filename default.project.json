@@ -1,11 +1,11 @@
 {
-  "name": "project",
+  "name": "Cutscene",
   "tree": {
     "$className": "DataModel",
     "ReplicatedStorage": {
       "$className": "ReplicatedStorage",
       "$ignoreUnknownInstances": true,
-      "$path": "src/ReplicatedStorage"
+      "$path": "src/Cutscene"
     }
   }
 }
