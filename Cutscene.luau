@@ -5,11 +5,26 @@
 	October 12, 2024
 	Version: 1.0
 	
-	links:
-	- https://realethanplayzdev.github.io/DeviceInfo/About/
-	- https://www.roblox.com/library/5343169924
-	- https://devforum.roblox.com/t/716491
+	Links:
+	- https://www.roblox.com/library/
 	- https://github.com/memml/Cutscene-Module/blob/main/Cutscene.luau
+	
+	Example Code:
+	
+		local Cutscene = require(CutsceneModule)
+		local CutsceneKeyframe = require(CutsceneModule.Keyframe)
+		
+		local CutsceneData = {
+			CutsceneKeyframe.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.In, true)
+		}
+		
+		local newCutscene = Cutscene.new(CameraPointsFolder, CutsceneData)
+		
+		task.wait(5)
+		
+		newCutscene:Play()
+	
+	---
 --]]
 
 assert(game:GetService("RunService"):IsClient(), "Cutscene can only run in the client")
@@ -91,7 +106,8 @@ function cutsceneClass:Play()
 			local bars = UI:Clone()
 			bars.Parent = game.Players.LocalPlayer.PlayerGui
 
-			TweenService:Create(bars.Bars.Frame, TweenInfo.new(.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {})
+			TweenService:Create(bars.Bars.Frame, TweenInfo.new(2, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {Position = UDim2.fromScale(.5, 1.375)}):Play()
+			TweenService:Create(bars.Bars.Frame2, TweenInfo.new(2, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {Position = UDim2.fromScale(.5, -0.375)}):Play()
 		end
 
 		local StartTween = TweenService:Create(Camera,
@@ -121,10 +137,6 @@ function cutsceneClass:Play()
 		self.Completed:Fire()
 		Camera.CameraType = Enum.CameraType.Custom
 	end)
-end
-
-function cutsceneClass:Destroy()
-	table.clear(self)
 end
 
 return cutsceneClass
